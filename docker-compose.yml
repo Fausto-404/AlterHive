@@ -1,0 +1,40 @@
+services:
+  honeypot:
+    image: "${ALTERHIVE_HELPER_IMAGE:-alterhive-v100-honeypot:latest}"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: alterhive-honeypot
+    ports:
+      - "127.0.0.1:${SSH_PORT:-2222}:2222"
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    environment:
+      - SSH_ADDR=:2222
+      - API_ADDR=:8000
+      - TOPOLOGY_CIDR=${TOPOLOGY_CIDR:-192.168.56.0/24}
+      - SESSION_TIMEOUT=${SESSION_TIMEOUT:-600}
+      - CONFIG_DIR=/app/configs
+      - ALTERHIVE_PROJECT_DIR=${PWD}
+      - ALTERHIVE_HELPER_IMAGE=${ALTERHIVE_HELPER_IMAGE:-alterhive-v100-honeypot:latest}
+    volumes:
+      - ./configs:/app/configs
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/healthz"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: alterhive-frontend
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-3000}:80"
+    depends_on:
+      honeypot:
+        condition: service_healthy
+    restart: unless-stopped

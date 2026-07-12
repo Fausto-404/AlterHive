@@ -1,0 +1,89 @@
+{
+  "sessionView": {
+    "badge": "Session view",
+    "title": "Isolated attack topology",
+    "back": "Back to session"
+  },
+  "scope": {
+    "title": "Topology scope",
+    "global": "Global topology",
+    "session": "Session topology",
+    "globalHint": "Base network and all dynamic assets",
+    "sessionHint": "Only the attack path visible to the selected session",
+    "selectSession": "Select a session",
+    "noSessions": "No sessions available",
+    "openSession": "View session details"
+  },
+  "title": "Topology",
+  "view": {
+    "global": "Global View",
+    "currentSubnet": "Current Subnet",
+    "viewMode": "View Mode:"
+  },
+  "stats": {
+    "subnets": "Subnets Discovered",
+    "activeHosts": "Active Hosts",
+    "shadowAssets": "Shadow Assets",
+    "lockedNodes": "Locked Nodes",
+    "attackPaths": "Attack Paths",
+    "evidenceClues": "Evidence Clues"
+  },
+  "units": {
+    "count": "",
+    "lines": ""
+  },
+  "legend": {
+    "entry": "Entry",
+    "active": "Active",
+    "locked": "Locked",
+    "shadow": "Shadow"
+  },
+  "searchPlaceholder": "Search nodes / IP / hostname",
+  "tooltip": {
+    "autoLayout": "Auto-layout",
+    "minimap": "Minimap, click to navigate"
+  },
+  "table": {
+    "title": "Attack Paths / Relationships",
+    "columns": {
+      "source": "Source",
+      "target": "Target",
+      "relation": "Relation",
+      "status": "Status",
+      "protocolPort": "Protocol / Port",
+      "gate": "Gate / Condition",
+      "evidence": "Evidence",
+      "lastProbe": "Last Probe"
+    }
+  },
+  "badge": {
+    "entrySegment": "Entry Segment",
+    "entryHost": "Entry Host",
+    "shadow": "SHADOW",
+    "locked": "LOCKED",
+    "active": "ACTIVE",
+    "hop": "Hop {{n}}",
+    "shadowSubnet": "Shadow Subnet"
+  },
+  "detail": {
+    "edgeTitle": "Edge / Relationship Detail",
+    "nodeTitle": "Node Detail",
+    "role": "Role",
+    "openPorts": "Open Ports",
+    "os": "OS",
+    "gateCondition": "Gate Condition",
+    "upstreamNodes": "Upstream Nodes",
+    "reachableNodes": "Reachable Nodes",
+    "outEdges": "Outbound Edges",
+    "noOutEdges": "No outbound edges. Waiting for further evidence or planner generation."
+  },
+  "edgeLabel": {
+    "nmapDiscovered": "Discovered by nmap"
+  },
+  "error": {
+    "loadFailed": "Failed to load topology"
+  },
+  "subnetInfo": "{{total}} hosts · {{active}} active",
+  "subnetMeta": "{{locked}} locked · {{shadow}} shadow",
+  "empty": "No topology nodes"
+}

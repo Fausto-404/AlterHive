@@ -1,0 +1,90 @@
+{
+  "title": "Session Detail",
+  "cards": {
+    "commandCount": "Commands",
+    "commandCountDesc": "Total commands in this session",
+    "evidenceHits": "Evidence Hits",
+    "evidenceHitsDesc": "Evidence rule trigger count",
+    "threatScore": "Threat Score",
+    "threatScoreDesc": "Overall threat score",
+    "ppfTriggered": "PPF Triggered",
+    "ppfTriggeredDesc": "Pseudo-progress feedback status"
+  },
+  "sections": {
+    "ppfProgress": "PPF Trap Progress",
+    "evidenceFound": "Evidence Found",
+    "scoreBreakdown": "Score Breakdown",
+    "shadowHosts": "Shadow Hosts"
+  },
+  "tabs": {
+    "commandTimeline": "Command Timeline",
+    "terminalReplay": "Terminal Replay"
+  },
+  "columns": {
+    "sessionId": "Session ID",
+    "username": "Username",
+    "sourceIp": "Source IP",
+    "status": "Status",
+    "commands": "Commands",
+    "evidence": "Evidence",
+    "threat": "Threat",
+    "score": "Score",
+    "ppf": "PPF",
+    "connectedAt": "Connected At",
+    "actions": "Actions",
+    "time": "Time",
+    "host": "Host",
+    "command": "Command",
+    "source": "Source",
+    "intent": "Intent",
+    "output": "Output"
+  },
+  "status": {
+    "active": "Active",
+    "closed": "Closed",
+    "idle": "Idle"
+  },
+  "ppf": {
+    "engaged": "Engaged",
+    "pending": "Pending"
+  },
+  "action": {
+    "detail": "Detail",
+    "replay": "Replay",
+    "topology": "Session topology",
+    "delete": "Delete"
+  },
+  "confirm": {
+    "title": "Delete this session?",
+    "okText": "Delete",
+    "cancelText": "Cancel"
+  },
+  "message": {
+    "loadFailed": "Failed to load sessions",
+    "deleted": "Session deleted",
+    "deleteFailed": "Failed to delete session"
+  },
+  "pagination": {
+    "total": "{{total}} sessions",
+    "range": "{{start}}–{{end}} of {{total}}",
+    "autoRefresh": "Auto-refreshes every 10s"
+  },
+  "commandModal": {
+    "title": "Command #{{number}} Details",
+    "time": "Time",
+    "host": "Host",
+    "source": "Source",
+    "intent": "Intent",
+    "score": "Score",
+    "evidence": "Evidence"
+  },
+  "empty": {
+    "noReplay": "No command replay available",
+    "notFound": "Session not found"
+  },
+  "searchPlaceholder": "Search in commands, outputs, intents",
+  "evidencePrefix": "Evidence: ",
+  "error": {
+    "loadFailed": "Failed to load session detail"
+  }
+}

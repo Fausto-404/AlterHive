@@ -1,0 +1,43 @@
+{
+  "title": "态势总览",
+  "cards": {
+    "activeSessions": "活动会话",
+    "activeSessionsDesc": "当前正在进行的攻击会话",
+    "ppfTriggered": "PPF 触发",
+    "ppfTriggeredDesc": "伪进度反馈触发次数",
+    "evidenceHits": "证据命中",
+    "evidenceHitsDesc": "证据规则触发次数",
+    "totalScore": "累计评分",
+    "totalScoreDesc": "所有会话威胁评分总和",
+    "uniqueAttackers": "唯一攻击者",
+    "uniqueAttackersDesc": "不同来源 IP 的攻击源数量",
+    "totalCommands": "命令总量",
+    "totalCommandsDesc": "已捕获的命令总数",
+    "totalSessions": "累计会话",
+    "totalSessionsDesc": "已记录的攻击会话总数",
+    "intentTypes": "意图类型",
+    "intentTypesDesc": "已识别的不同攻击意图数"
+  },
+  "intentDistribution": "攻击意图分布",
+  "topAttackers": "Top 攻击者",
+  "recentSessions": "最近会话",
+  "columns": {
+    "sessionId": "会话 ID",
+    "username": "用户名",
+    "sourceIp": "来源 IP",
+    "commands": "命令数",
+    "evidence": "证据",
+    "score": "评分",
+    "ppf": "PPF",
+    "connectedAt": "连接时间",
+    "sessions": "会话数"
+  },
+  "empty": {
+    "intents": "暂无意图数据",
+    "attackers": "暂无攻击者数据",
+    "sessions": "暂无会话记录"
+  },
+  "error": {
+    "loadFailed": "态势总览加载失败"
+  }
+}

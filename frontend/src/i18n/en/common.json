@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "topology": "Topology",
+    "sessions": "Sessions",
+    "status": "Status",
+    "sessionDetail": "Session Detail",
+    "sessionDetailDesc": "Attack commands, evidence hits, and pseudo-progress status tracking",
+    "sessionsDesc": "View all captured attack sessions and details (10s auto-refresh)",
+    "topologyDesc": "Entry, network segments, jump hosts, and dynamic shadow asset topology",
+    "statusDesc": "Runtime status, honeypot configuration, and LLM model management",
+    "dashboardDesc": "Honeypot core metrics overview (10s auto-refresh)"
+  },
+  "role": {
+    "admin": "Admin",
+    "operator": "Operator",
+    "analyst": "Analyst",
+    "researcher": "Researcher",
+    "readonly": "Read-only"
+  },
+  "action": {
+    "logout": "Logout",
+    "refresh": "Refresh",
+    "detail": "Details",
+    "replay": "Replay",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "save": "Save",
+    "test": "Test Connection",
+    "fetch": "Fetch Models"
+  },
+  "status": {
+    "active": "Active",
+    "locked": "Locked",
+    "shadow": "Shadow",
+    "entry": "Entry",
+    "conditional": "Conditional"
+  },
+  "threat": {
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "ppf": {
+    "triggered": "Triggered",
+    "pending": "Pending",
+    "active": "PPF ACTIVE",
+    "waiting": "PPF Waiting",
+    "evidenceDiscovery": "Evidence Discovery",
+    "credentialReuse": "Credential Reuse",
+    "protocolSwitch": "Protocol Switch",
+    "networkIsolation": "Network Isolation"
+  },
+  "source": {
+    "llm": "LLM",
+    "rule": "Rule"
+  },
+  "confirm": {
+    "deleteSession": "Delete this session?",
+    "deleteOk": "Delete",
+    "deleteCancel": "Cancel"
+  },
+  "shell": {
+    "shell": "Shell: ",
+    "currentPosition": "Current Position",
+    "hopCount": "{{count}} hop(s)",
+    "sshPath": "SSH Path",
+    "expandAll": "Expand All ({{count}} lines)",
+    "collapse": "Collapse",
+    "evidence": "Evidence",
+    "credential": "Credential",
+    "protocol": "Protocol",
+    "networkPenalty": "Network Touch Penalty"
+  },
+  "error": {
+    "fallback": "Request failed, please try again later"
+  },
+  "language": "EN"
+}

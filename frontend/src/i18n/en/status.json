@@ -1,0 +1,105 @@
+{
+  "title": "Status",
+  "systemInfo": "System Info",
+  "honeypotConfig": "Honeypot Config",
+  "labels": {
+    "appName": "App Name",
+    "version": "Version",
+    "mode": "Mode",
+    "apiPrefix": "API Prefix",
+    "sshPort": "SSH Port",
+    "apiPort": "API Port",
+    "topologyCidr": "Default Topology CIDR",
+    "sessionTimeout": "Session Timeout (s)"
+  },
+  "validation": {
+    "sshPortRequired": "SSH port is required",
+    "apiPortRequired": "API port is required",
+    "cidrRequired": "Topology CIDR is required",
+    "cidrFormat": "Enter a valid CIDR, e.g. 192.168.56.0/24",
+    "timeoutRequired": "Session timeout is required"
+  },
+  "tooltip": {
+    "topologyCidr": "The network segment of the entry host. After saving, the entry host, same-segment assets, and topology edges will be migrated to the new CIDR."
+  },
+  "buttons": {
+    "saveConfig": "Save Config",
+    "resetDefault": "Reset to Default"
+  },
+  "updateModal": {
+    "title": "Updating Honeypot Config",
+    "body": "The system is rewriting the default topology CIDR, rebuilding Docker containers, and waiting for API recovery. SSH/API will be briefly interrupted; session and topology data will reload after refresh.",
+    "progressSteps": {
+      "preparing": "Preparing honeypot config update",
+      "writingConfig": "Writing config and generating new topology template",
+      "rebuilding": "Rebuilding and restarting honeypot containers, please do not close this page",
+      "queued": "Config saved, waiting for Docker update to start",
+      "running": "Docker is rebuilding and restarting containers",
+      "complete": "Config applied, refreshing console",
+      "failed": "Honeypot config update failed",
+      "configValidating": "Container recovered, validating new config",
+      "waitingConsistency": "Container recovered, waiting for new config to sync",
+      "waitingStart": "Waiting for update task to start",
+      "apiUnavailable": "API temporarily unavailable, container restarting",
+      "apiRecovered": "API recovered, reading update status",
+      "timeoutWarning": "Config submitted, but auto-restart is taking longer than expected. Please refresh the page later."
+    },
+    "honeypotUpdated": "Honeypot config updated"
+  },
+  "providers": {
+    "openai": "OpenAI",
+    "anthropic": "Anthropic",
+    "deepseek": "DeepSeek",
+    "qwen": "Qwen",
+    "zhipu": "Zhipu AI",
+    "moonshot": "Moonshot",
+    "google": "Google",
+    "ollama": "Ollama (Local)",
+    "openrouter": "OpenRouter",
+    "minimax": "MiniMax",
+    "xiaomi_mimo": "Xiaomi MiMo",
+    "custom": "Custom"
+  },
+  "llm": {
+    "title": "LLM Model Config",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "selectProvider": "Select Provider",
+    "llmEnable": "LLM Enable",
+    "baseUrl": "Base URL",
+    "apiKey": "API Key",
+    "modelId": "Model ID",
+    "ollamaHint": "Usually not needed for local deployment",
+    "customHint": "Usually not needed",
+    "modelPlaceholder": "Select or enter model ID",
+    "fetchModelsTooltip": "Fetch available model list from server",
+    "modelGroupOther": "Other",
+    "modelGroupCurrent": "Current Config",
+    "testConnection": "Test Connection",
+    "saveConfig": "Save Config",
+    "honeypotSaveTooltip": "After saving, the page will be locked and the honeypot container will be automatically rebuilt.",
+    "messages": {
+      "modelsFetched": "Fetched {{count}} model(s)",
+      "noModels": "No models found, check URL and Key",
+      "fetchFailed": "Failed to fetch models",
+      "connectionOk": "Connection OK",
+      "connectionFailed": "Connection failed",
+      "testFailed": "Test failed",
+      "saved": "Config saved",
+      "saveFailed": "Save failed",
+      "llmEnabled": "LLM enabled",
+      "llmDisabled": "LLM disabled",
+      "operationFailed": "Operation failed"
+    },
+    "alert": {
+      "testing": "Testing...",
+      "passed": "Test passed",
+      "failed": "Test failed"
+    }
+  },
+  "error": {
+    "loadFailed": "Failed to load status",
+    "loadError": "Load failed",
+    "saveFailed": "Failed to save honeypot config"
+  }
+}

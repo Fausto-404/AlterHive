@@ -1,0 +1,10 @@
+core:
+  logging:
+    debug: false
+    logDisableTimestamp: false
+  tracings:
+    rabbit-mq:
+      enabled: false
+  prometheus:
+    path: /metrics
+    port: ":9090"

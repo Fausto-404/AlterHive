@@ -1,0 +1,43 @@
+{
+  "title": "Dashboard",
+  "cards": {
+    "activeSessions": "Active Sessions",
+    "activeSessionsDesc": "Currently active attack sessions",
+    "ppfTriggered": "PPF Triggered",
+    "ppfTriggeredDesc": "Pseudo-progress feedback triggers",
+    "evidenceHits": "Evidence Hits",
+    "evidenceHitsDesc": "Evidence rule trigger count",
+    "totalScore": "Total Score",
+    "totalScoreDesc": "Sum of all session threat scores",
+    "uniqueAttackers": "Unique Attackers",
+    "uniqueAttackersDesc": "Number of distinct source IPs",
+    "totalCommands": "Total Commands",
+    "totalCommandsDesc": "Total commands captured",
+    "totalSessions": "Total Sessions",
+    "totalSessionsDesc": "Total attack sessions recorded",
+    "intentTypes": "Intent Types",
+    "intentTypesDesc": "Number of distinct attack intents identified"
+  },
+  "intentDistribution": "Attack Intent Distribution",
+  "topAttackers": "Top Attackers",
+  "recentSessions": "Recent Sessions",
+  "columns": {
+    "sessionId": "Session ID",
+    "username": "Username",
+    "sourceIp": "Source IP",
+    "commands": "Commands",
+    "evidence": "Evidence",
+    "score": "Score",
+    "ppf": "PPF",
+    "connectedAt": "Connected At",
+    "sessions": "Sessions"
+  },
+  "empty": {
+    "intents": "No intent data",
+    "attackers": "No attacker data",
+    "sessions": "No sessions"
+  },
+  "error": {
+    "loadFailed": "Failed to load dashboard"
+  }
+}

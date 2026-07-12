@@ -1,0 +1,90 @@
+{
+  "title": "会话详情",
+  "cards": {
+    "commandCount": "命令数",
+    "commandCountDesc": "当前会话累计命令",
+    "evidenceHits": "证据命中",
+    "evidenceHitsDesc": "证据规则触发次数",
+    "threatScore": "威胁评分",
+    "threatScoreDesc": "综合威胁评分",
+    "ppfTriggered": "PPF 触发",
+    "ppfTriggeredDesc": "伪进度反馈状态"
+  },
+  "sections": {
+    "ppfProgress": "PPF 陷阱进度",
+    "evidenceFound": "证据发现",
+    "scoreBreakdown": "评分分解",
+    "shadowHosts": "阴影主机"
+  },
+  "tabs": {
+    "commandTimeline": "命令时间线",
+    "terminalReplay": "终端回放"
+  },
+  "columns": {
+    "sessionId": "会话 ID",
+    "username": "用户名",
+    "sourceIp": "来源 IP",
+    "status": "状态",
+    "commands": "命令数",
+    "evidence": "证据",
+    "threat": "威胁",
+    "score": "评分",
+    "ppf": "PPF",
+    "connectedAt": "连接时间",
+    "actions": "操作",
+    "time": "时间",
+    "host": "主机",
+    "command": "命令",
+    "source": "来源",
+    "intent": "意图",
+    "output": "输出"
+  },
+  "status": {
+    "active": "活跃",
+    "closed": "已关闭",
+    "idle": "空闲"
+  },
+  "ppf": {
+    "engaged": "已触发",
+    "pending": "等待中"
+  },
+  "action": {
+    "detail": "详情",
+    "replay": "回放",
+    "topology": "会话拓扑",
+    "delete": "删除"
+  },
+  "confirm": {
+    "title": "确认删除此会话？",
+    "okText": "删除",
+    "cancelText": "取消"
+  },
+  "message": {
+    "loadFailed": "加载会话列表失败",
+    "deleted": "会话已删除",
+    "deleteFailed": "删除会话失败"
+  },
+  "pagination": {
+    "total": "共 {{total}} 个会话",
+    "range": "第 {{start}}–{{end}} 条，共 {{total}} 条",
+    "autoRefresh": "10 秒自动刷新"
+  },
+  "commandModal": {
+    "title": "命令 #{{number}} 详情",
+    "time": "时间",
+    "host": "主机",
+    "source": "来源",
+    "intent": "意图",
+    "score": "评分",
+    "evidence": "证据"
+  },
+  "empty": {
+    "noReplay": "暂无命令回放",
+    "notFound": "会话不存在"
+  },
+  "searchPlaceholder": "在命令、输出、意图中搜索",
+  "evidencePrefix": "证据: ",
+  "error": {
+    "loadFailed": "会话详情加载失败"
+  }
+}

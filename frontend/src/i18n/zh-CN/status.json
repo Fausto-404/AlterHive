@@ -1,0 +1,105 @@
+{
+  "title": "平台状态",
+  "systemInfo": "系统信息",
+  "honeypotConfig": "蜜罐配置",
+  "labels": {
+    "appName": "应用名称",
+    "version": "版本",
+    "mode": "运行模式",
+    "apiPrefix": "API 前缀",
+    "sshPort": "SSH 端口",
+    "apiPort": "API 端口",
+    "topologyCidr": "默认拓扑网段",
+    "sessionTimeout": "会话超时 (秒)"
+  },
+  "validation": {
+    "sshPortRequired": "请输入 SSH 端口",
+    "apiPortRequired": "请输入 API 端口",
+    "cidrRequired": "请输入默认拓扑网段",
+    "cidrFormat": "请输入 CIDR，例如 192.168.56.0/24",
+    "timeoutRequired": "请输入会话超时"
+  },
+  "tooltip": {
+    "topologyCidr": "入口机器所在网段；保存后入口主机、同网段资产和拓扑边会按新网段迁移。"
+  },
+  "buttons": {
+    "saveConfig": "保存配置",
+    "resetDefault": "恢复默认配置"
+  },
+  "updateModal": {
+    "title": "正在更新蜜罐配置",
+    "body": "系统正在重写默认拓扑网段、重建 Docker 容器并等待 API 恢复。此过程会短暂中断 SSH/API，会话与拓扑数据将在刷新后重新加载。",
+    "progressSteps": {
+      "preparing": "准备更新蜜罐配置",
+      "writingConfig": "正在写入配置并生成新的拓扑模板",
+      "rebuilding": "正在重建并重启蜜罐容器，请不要关闭页面",
+      "queued": "更新任务已排队",
+      "running": "Docker 正在重建并重启容器",
+      "complete": "配置已生效，正在刷新控制台",
+      "failed": "蜜罐配置更新失败",
+      "configValidating": "容器已恢复，正在校验新配置",
+      "waitingConsistency": "容器已恢复，等待新配置读回一致",
+      "waitingStart": "等待更新任务启动",
+      "apiUnavailable": "API 暂时不可用，容器正在重启",
+      "apiRecovered": "API 已恢复，正在读取更新状态",
+      "timeoutWarning": "配置已提交，但自动重启耗时较长，请稍后刷新页面确认"
+    },
+    "honeypotUpdated": "蜜罐配置已更新"
+  },
+  "providers": {
+    "openai": "OpenAI",
+    "anthropic": "Anthropic",
+    "deepseek": "DeepSeek",
+    "qwen": "通义千问",
+    "zhipu": "智谱 AI",
+    "moonshot": "月之暗面",
+    "google": "Google",
+    "ollama": "Ollama (本地)",
+    "openrouter": "OpenRouter",
+    "minimax": "MiniMax",
+    "xiaomi_mimo": "小米 MiMo",
+    "custom": "自定义"
+  },
+  "llm": {
+    "title": "LLM 模型配置",
+    "enabled": "已启用",
+    "disabled": "未启用",
+    "selectProvider": "选择模型服务商",
+    "llmEnable": "LLM 启用",
+    "baseUrl": "接口地址 (Base URL)",
+    "apiKey": "接口密钥 (API Key)",
+    "modelId": "模型名称 (Model ID)",
+    "ollamaHint": "本地部署通常不需要",
+    "customHint": "通常无需填写",
+    "modelPlaceholder": "选择预设或输入模型 ID",
+    "fetchModelsTooltip": "从服务端同步可用模型列表",
+    "modelGroupOther": "其他",
+    "modelGroupCurrent": "当前配置",
+    "testConnection": "测试连通性",
+    "saveConfig": "保存配置",
+    "honeypotSaveTooltip": "保存后会锁定页面并自动重建蜜罐容器。",
+    "messages": {
+      "modelsFetched": "获取到 {{count}} 个模型",
+      "noModels": "未获取到模型，请检查地址和 Key",
+      "fetchFailed": "获取模型列表失败",
+      "connectionOk": "连接成功",
+      "connectionFailed": "连接失败",
+      "testFailed": "测试失败",
+      "saved": "配置已保存",
+      "saveFailed": "保存失败",
+      "llmEnabled": "LLM 已启用",
+      "llmDisabled": "LLM 已禁用",
+      "operationFailed": "操作失败"
+    },
+    "alert": {
+      "testing": "测试中...",
+      "passed": "测试通过",
+      "failed": "测试失败"
+    }
+  },
+  "error": {
+    "loadFailed": "状态加载失败",
+    "loadError": "加载失败",
+    "saveFailed": "保存蜜罐配置失败"
+  }
+}

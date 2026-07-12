@@ -1,0 +1,89 @@
+{
+  "sessionView": {
+    "badge": "会话视图",
+    "title": "独立攻击拓扑",
+    "back": "返回会话详情"
+  },
+  "scope": {
+    "title": "拓扑范围",
+    "global": "全局拓扑",
+    "session": "会话拓扑",
+    "globalHint": "显示基础网络与所有动态资产",
+    "sessionHint": "仅显示所选会话可见的攻击路径",
+    "selectSession": "选择一个会话",
+    "noSessions": "暂无可用会话",
+    "openSession": "查看会话详情"
+  },
+  "title": "子网幻境",
+  "view": {
+    "global": "全局视图",
+    "currentSubnet": "当前子网",
+    "viewMode": "视图模式："
+  },
+  "stats": {
+    "subnets": "发现子网",
+    "activeHosts": "活跃主机",
+    "shadowAssets": "影子资产",
+    "lockedNodes": "锁定节点",
+    "attackPaths": "攻击路径",
+    "evidenceClues": "证据线索"
+  },
+  "units": {
+    "count": "个",
+    "lines": "条"
+  },
+  "legend": {
+    "entry": "入口",
+    "active": "活跃",
+    "locked": "锁定",
+    "shadow": "影子"
+  },
+  "searchPlaceholder": "搜索节点 / IP / 主机名",
+  "tooltip": {
+    "autoLayout": "自动整理布局",
+    "minimap": "拓扑小地图，点击跳转画布区域"
+  },
+  "table": {
+    "title": "攻击路径 / 关系明细",
+    "columns": {
+      "source": "源节点",
+      "target": "目标节点",
+      "relation": "关系类型",
+      "status": "状态",
+      "protocolPort": "协议 / 端口",
+      "gate": "Gate / 条件",
+      "evidence": "证据",
+      "lastProbe": "最后探测时间"
+    }
+  },
+  "badge": {
+    "entrySegment": "入口网段",
+    "entryHost": "入口主机",
+    "shadow": "SHADOW",
+    "locked": "LOCKED",
+    "active": "ACTIVE",
+    "hop": "第{{n}}跳",
+    "shadowSubnet": "影子子网"
+  },
+  "detail": {
+    "edgeTitle": "边 / 关系详情",
+    "nodeTitle": "节点详情",
+    "role": "角色",
+    "openPorts": "开放端口",
+    "os": "操作系统",
+    "gateCondition": "Gate 条件",
+    "upstreamNodes": "上游节点",
+    "reachableNodes": "可达节点",
+    "outEdges": "边（出站）",
+    "noOutEdges": "暂无出站边，等待进一步证据或 planner 生成。"
+  },
+  "edgeLabel": {
+    "nmapDiscovered": "nmap 发现"
+  },
+  "error": {
+    "loadFailed": "拓扑加载失败"
+  },
+  "subnetInfo": "{{total}} 台主机 · {{active}} 台活跃",
+  "subnetMeta": "{{locked}} 台锁定 · {{shadow}} 台影子",
+  "empty": "暂无拓扑节点"
+}

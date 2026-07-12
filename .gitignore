@@ -1,0 +1,46 @@
+# Build artifacts
+alterhive
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go
+vendor/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.env
+!.env.example
+
+# Configs with secrets
+configs/runtime-update-status.json
+
+# LLM config can hold operator-pasted API keys; runtime prefers env vars.
+# Keep this file out of the repo to prevent accidental key commits while
+# still letting ops ship their own override at deploy time.
+configs/llm.yaml
+!configs/llm.yaml.example
+
+# Test artifacts
+*.test
+*.out
+coverage.txt
+
+# Temp files
+*.tmp
+*.bak

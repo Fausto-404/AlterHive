@@ -1,0 +1,85 @@
+{
+  "intent": {
+    "network_scan": "Network Scan",
+    "service_probe": "Service Probe",
+    "http_probe": "HTTP Probe",
+    "db_probe": "Database Probe",
+    "domain_probe": "Domain Probe",
+    "lateral_movement": "Lateral Movement",
+    "data_exfiltration": "Data Exfiltration",
+    "shell_command": "Shell Command",
+    "privilege_escalation": "Privilege Escalation",
+    "evidence_search": "Evidence Search",
+    "subnet_scan": "Subnet Scan",
+    "unknown": "Unknown"
+  },
+  "intentCategory": {
+    "recon": "Recon",
+    "exploit": "Exploit",
+    "lateral": "Lateral",
+    "deception": "Deception"
+  },
+  "evidenceTokens": {
+    "routing_info": "Routing Info",
+    "arp_cache": "ARP Cache",
+    "subnet_scan": "Subnet Scan",
+    "app_config": "App Config",
+    "app_log": "App Log",
+    "db_probe": "DB Probe",
+    "domain_probe": "Domain Probe",
+    "http_probe": "HTTP Probe",
+    "lateral_probe": "Lateral Probe",
+    "service_enum": "Service Enum",
+    "pseudo_progress": "Pseudo Progress"
+  },
+  "evidenceDescriptions": {
+    "routing_info": "ip route / /etc/hosts read",
+    "arp_cache": "arp -a command",
+    "subnet_scan": "nmap / ping scan",
+    "app_config": "App config file read",
+    "app_log": "App log read",
+    "db_probe": "Database connection probe",
+    "domain_probe": "DC/AD probe",
+    "http_probe": "HTTP API probe",
+    "lateral_probe": "SSH/lateral connection probe",
+    "service_enum": "Port/service enumeration",
+    "pseudo_progress": "Pseudo-progress feedback triggered"
+  },
+  "categoryLabels": {
+    "recon": "Recon",
+    "exploit": "Exploit",
+    "lateral": "Lateral",
+    "deception": "Deception"
+  },
+  "roleLabels": {
+    "gateway": "Gateway",
+    "jumpbox": "Jumpbox",
+    "dc": "Domain Controller",
+    "dc_shadow": "DC (Shadow)",
+    "database": "Database",
+    "database_shadow": "Database (Shadow)",
+    "web_app": "Web App",
+    "cache": "Cache",
+    "gitlab": "GitLab",
+    "gitlab_shadow": "GitLab (Shadow)",
+    "jenkins_shadow": "Jenkins (Shadow)",
+    "k8s_shadow": "K8s (Shadow)"
+  },
+  "triggeredBy": {
+    "db_probe": "Database Probe",
+    "http_probe": "HTTP Probe",
+    "domain_probe": "Domain Probe",
+    "lateral_movement": "Lateral Movement"
+  },
+  "login": {
+    "title": "AlterHive",
+    "subtitle": "Adaptive Honeypot Platform",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Login",
+    "usernameRequired": "Please enter username",
+    "passwordRequired": "Please enter password",
+    "success": "Login successful",
+    "failed": "Login failed, check credentials"
+  }
+}

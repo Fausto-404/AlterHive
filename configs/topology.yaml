@@ -1,0 +1,168 @@
+# AlterHive Graph Topology Configuration
+# Runtime expands this graph with shadow segments/hosts when attacker intent appears.
+
+cidr: "192.168.56.0/24"
+gateway: "192.168.56.1"
+local_ip: "192.168.56.23"
+dns_suffix: "corp.local"
+
+segments:
+  - cidr: "192.168.56.0/24"
+    name: "corp-access"
+    zone: "internal"
+    gateway_ip: "192.168.56.1"
+    shadow: false
+
+edges:
+  - from: "staging-web-01"
+    to: "192.168.56.0/24"
+    type: "dual_nic"
+    via: "192.168.56.23"
+    status: "active"
+  - from: "192.168.56.23"
+    to: "192.168.56.10"
+    type: "ssh"
+    via: "192.168.56.23"
+    status: "active"
+  - from: "192.168.56.10"
+    to: "192.168.56.50"
+    type: "pivot"
+    via: "192.168.56.10"
+    required_state:
+      - "gate_jump01_lowpriv_shell"
+    status: "locked"
+
+hosts:
+  - ip: "192.168.56.23"
+    hostname: "staging-web-01"
+    role: "webserver"
+    os: "Ubuntu 22.04"
+    segment_cidr: "192.168.56.0/24"
+    services:
+      - port: 22
+        protocol: "ssh"
+        failure_mode: "auth_denied"
+      - port: 80
+        protocol: "http"
+        nmap_name: "http"
+        banner: "nginx"
+        failure_mode: "redirect_login"
+      - port: 3306
+        protocol: "mysql"
+        nmap_name: "mysql"
+        failure_mode: "auth_denied"
+      - port: 5000
+        protocol: "http-proxy"
+        nmap_name: "http-proxy"
+        banner: "gunicorn"
+        failure_mode: "redirect_login"
+
+  - ip: "192.168.56.1"
+    hostname: "gateway"
+    role: "gateway"
+    os: "Linux"
+    segment_cidr: "192.168.56.0/24"
+    services:
+      - port: 22
+        protocol: "ssh"
+        failure_mode: "auth_denied"
+
+  - ip: "192.168.56.10"
+    hostname: "jump01"
+    role: "jumpbox"
+    os: "Ubuntu 22.04"
+    segment_cidr: "192.168.56.0/24"
+    password: "ansible123"
+    services:
+      - port: 22
+        protocol: "ssh"
+        failure_mode: "auth_denied"
+
+  - ip: "192.168.56.30"
+    hostname: "redis-cache"
+    role: "cache"
+    os: "Alpine Linux"
+    segment_cidr: "192.168.56.0/24"
+    services:
+      - port: 6379
+        protocol: "redis"
+        nmap_name: "redis"
+        failure_mode: "auth_required"
+
+  - ip: "192.168.56.45"
+    hostname: "jenkins-internal"
+    role: "jenkins"
+    os: "Ubuntu 22.04"
+    segment_cidr: "192.168.56.0/24"
+    services:
+      - port: 8080
+        protocol: "http"
+        nmap_name: "http-proxy"
+        banner: "Jetty"
+        failure_mode: "redirect_login"
+
+  - ip: "192.168.56.50"
+    hostname: "dc01"
+    role: "dc"
+    os: "Windows Server 2019"
+    segment_cidr: "192.168.56.0/24"
+    reachable_via: "192.168.56.10"
+    password: "P@ssw0rd!"
+    required_state:
+      - "gate_jump01_lowpriv_shell"
+    services:
+      - port: 22
+        protocol: "ssh"
+        failure_mode: "auth_denied"
+      - port: 53
+        protocol: "dns"
+        nmap_name: "domain"
+        failure_mode: "refused"
+      - port: 88
+        protocol: "kerberos"
+        nmap_name: "kerberos-sec"
+        failure_mode: "auth_required"
+      - port: 135
+        protocol: "msrpc"
+        nmap_name: "msrpc"
+        failure_mode: "refused"
+      - port: 389
+        protocol: "ldap"
+        nmap_name: "ldap"
+        failure_mode: "stronger_auth_required"
+      - port: 445
+        protocol: "smb"
+        nmap_name: "microsoft-ds"
+        failure_mode: "access_denied"
+
+  - ip: "192.168.56.60"
+    hostname: "fin-db01"
+    role: "database"
+    os: "CentOS 7"
+    segment_cidr: "192.168.56.0/24"
+    services:
+      - port: 22
+        protocol: "ssh"
+        nmap_name: "ssh"
+        failure_mode: "auth_denied"
+      - port: 3306
+        protocol: "mysql"
+        nmap_name: "mysql"
+        failure_mode: "auth_denied"
+
+  - ip: "192.168.56.80"
+    hostname: "gitlab-internal"
+    role: "gitlab"
+    os: "Ubuntu 22.04"
+    segment_cidr: "192.168.56.0/24"
+    services:
+      - port: 80
+        protocol: "http"
+        nmap_name: "http"
+        banner: "nginx"
+        failure_mode: "redirect_login"
+      - port: 443
+        protocol: "https"
+        nmap_name: "ssl/http"
+        banner: "nginx"
+        failure_mode: "redirect_login"

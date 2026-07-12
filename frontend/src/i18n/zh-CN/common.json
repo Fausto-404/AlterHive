@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "dashboard": "态势总览",
+    "topology": "子网幻境",
+    "sessions": "攻击会话",
+    "status": "平台状态",
+    "sessionDetail": "会话详情",
+    "sessionDetailDesc": "攻击命令、证据命中与伪进展状态追踪",
+    "sessionsDesc": "查看所有捕获的攻击会话及其详情（10 秒自动刷新）",
+    "topologyDesc": "入口、网段、跳板与动态影子资产拓扑",
+    "statusDesc": "运行状态、蜜罐配置与 LLM 模型管理",
+    "dashboardDesc": "蜜罐运行核心指标概览（10 秒自动刷新）"
+  },
+  "role": {
+    "admin": "管理员",
+    "operator": "运营",
+    "analyst": "分析员",
+    "researcher": "研究员",
+    "readonly": "只读"
+  },
+  "action": {
+    "logout": "退出",
+    "refresh": "刷新",
+    "detail": "详情",
+    "replay": "回放",
+    "delete": "删除",
+    "cancel": "取消",
+    "save": "保存",
+    "test": "测试连通性",
+    "fetch": "获取模型"
+  },
+  "status": {
+    "active": "活跃",
+    "locked": "锁定",
+    "shadow": "影子",
+    "entry": "入口",
+    "conditional": "条件"
+  },
+  "threat": {
+    "high": "高",
+    "medium": "中",
+    "low": "低"
+  },
+  "ppf": {
+    "triggered": "触发",
+    "pending": "等待",
+    "active": "PPF ACTIVE",
+    "waiting": "PPF 等待中",
+    "evidenceDiscovery": "证据发现",
+    "credentialReuse": "凭据复用",
+    "protocolSwitch": "协议切换",
+    "networkIsolation": "网络隔离"
+  },
+  "source": {
+    "llm": "LLM",
+    "rule": "规则"
+  },
+  "confirm": {
+    "deleteSession": "删除这个会话？",
+    "deleteOk": "删除",
+    "deleteCancel": "取消"
+  },
+  "shell": {
+    "shell": "Shell: ",
+    "currentPosition": "当前位置",
+    "hopCount": "跳转 {{count}} 层",
+    "sshPath": "SSH 跳转路径",
+    "expandAll": "展开全部 ({{count}} 行)",
+    "collapse": "收起",
+    "evidence": "证据",
+    "credential": "凭据",
+    "protocol": "协议",
+    "networkPenalty": "网络触碰惩罚"
+  },
+  "error": {
+    "fallback": "请求失败，请稍后重试"
+  },
+  "language": "中文"
+}

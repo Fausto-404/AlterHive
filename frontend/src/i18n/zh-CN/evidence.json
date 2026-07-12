@@ -1,0 +1,85 @@
+{
+  "intent": {
+    "network_scan": "网络扫描",
+    "service_probe": "服务探测",
+    "http_probe": "HTTP 探测",
+    "db_probe": "数据库探测",
+    "domain_probe": "域探测",
+    "lateral_movement": "横向移动",
+    "data_exfiltration": "数据窃取",
+    "shell_command": "Shell 命令",
+    "privilege_escalation": "提权",
+    "evidence_search": "证据搜索",
+    "subnet_scan": "子网扫描",
+    "unknown": "未知"
+  },
+  "intentCategory": {
+    "recon": "侦察",
+    "exploit": "利用",
+    "lateral": "横向",
+    "deception": "欺骗"
+  },
+  "evidenceTokens": {
+    "routing_info": "路由信息",
+    "arp_cache": "ARP 缓存",
+    "subnet_scan": "子网扫描",
+    "app_config": "应用配置",
+    "app_log": "应用日志",
+    "db_probe": "数据库探测",
+    "domain_probe": "域探测",
+    "http_probe": "HTTP 探测",
+    "lateral_probe": "横向探测",
+    "service_enum": "服务枚举",
+    "pseudo_progress": "伪进展"
+  },
+  "evidenceDescriptions": {
+    "routing_info": "ip route / /etc/hosts 读取",
+    "arp_cache": "arp -a 命令执行",
+    "subnet_scan": "nmap / ping 扫描",
+    "app_config": "应用配置文件读取",
+    "app_log": "应用日志读取",
+    "db_probe": "数据库连接探测",
+    "domain_probe": "域控/AD 探测",
+    "http_probe": "HTTP API 探测",
+    "lateral_probe": "SSH/横向连接探测",
+    "service_enum": "端口/服务枚举",
+    "pseudo_progress": "伪进度反馈触发"
+  },
+  "categoryLabels": {
+    "recon": "侦察",
+    "exploit": "利用",
+    "lateral": "横向",
+    "deception": "欺骗"
+  },
+  "roleLabels": {
+    "gateway": "网关",
+    "jumpbox": "跳板机",
+    "dc": "域控",
+    "dc_shadow": "域控(影子)",
+    "database": "数据库",
+    "database_shadow": "数据库(影子)",
+    "web_app": "Web 应用",
+    "cache": "缓存",
+    "gitlab": "GitLab",
+    "gitlab_shadow": "GitLab(影子)",
+    "jenkins_shadow": "Jenkins(影子)",
+    "k8s_shadow": "K8s(影子)"
+  },
+  "triggeredBy": {
+    "db_probe": "数据库探测",
+    "http_probe": "HTTP 探测",
+    "domain_probe": "域探测",
+    "lateral_movement": "横向移动"
+  },
+  "login": {
+    "title": "AlterHive",
+    "subtitle": "自适应蜜罐平台",
+    "username": "用户名",
+    "password": "密码",
+    "submit": "登录",
+    "usernameRequired": "请输入用户名",
+    "passwordRequired": "请输入密码",
+    "success": "登录成功",
+    "failed": "登录失败，请检查账号密码"
+  }
+}
