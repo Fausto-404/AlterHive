@@ -188,46 +188,8 @@ npm run dev
 | 规则引擎 | 本地命令响应、协议响应、服务枚举、复杂命令处理和安全拦截 |
 | 多 Agent 欺骗 | Intent Router、Topology Planner、World Builder、Evidence、Safety、Consistency |
 | LLM 配置 | 支持 OpenAI-Compatible、Anthropic、DeepSeek、Qwen、Zhipu、Moonshot、Ollama 等 Provider |
-| 系统配置 | SSH/API 端口、拓扑 CIDR、会话超时、自动重启状态和系统信息 |
+| 系统配置 | LLM配置、SSH/API 端口、拓扑 CIDR、会话超时、自动重启状态和系统信息 |
 
-## 配置说明
-### 运行时配置
-运行时端口和拓扑 CIDR 位于 `.env` 和 `configs/.env`：
-
-```bash
-SSH_PORT=2222
-API_PORT=8000
-TOPOLOGY_CIDR=192.168.56.0/24
-SESSION_TIMEOUT=600
-FRONTEND_PORT=3000
-```
-
-### 拓扑配置
-核心拓扑位于 `configs/topology.yaml`，主要字段包括：
-
-+ `cidr`：入口网段。
-+ `gateway`：网关地址。
-+ `local_ip`：入口主机在虚拟网段中的地址。
-+ `segments`：网络段定义。
-+ `hosts`：虚拟主机、角色、服务、密码和访问条件。
-+ `edges`：主机、网段、跳板和 pivot 关系。
-
-### LLM 配置
-LLM 配置位于 `configs/llm.yaml`，默认关闭：
-
-```yaml
-enabled: false
-active_provider: openai
-```
-
-如确需启用外部模型，请同时显式设置：
-
-```bash
-export ALTERHIVE_ALLOW_LLM_NETWORK=true
-export ALTERHIVE_ALLOW_LLM_CONTEXT_EXPORT=true
-```
-
-> 安全建议：不要在 `configs/llm.yaml` 中写入真实 API Key，优先使用环境变量；不要使用未知第三方网关承载敏感演练上下文。
 
 ## 安全边界
 + 平台用于授权的安全研究、攻防演练和内部防守验证。
@@ -251,7 +213,6 @@ export ALTERHIVE_ALLOW_LLM_CONTEXT_EXPORT=true
 + 子网幻象拓扑和 shadow asset 扩展。
 + Web 控制台会话、拓扑、命令和系统配置管理。
 + 多 Agent 欺骗规划和证据投放机制。
-+ 默认关闭 LLM 外联，降低敏感上下文泄露风险。
 
 ## 免责声明
 本项目仅用于合法授权的安全测试、攻防演练、防守验证和安全研究。请勿将本项目用于未授权访问、攻击真实系统或规避安全监测。使用者应自行承担部署、配置和使用过程中的合规与安全责任。
