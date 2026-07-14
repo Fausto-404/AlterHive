@@ -107,7 +107,6 @@ AlterHive-v1.0.0/
 │   ├── alterhive.yaml       # 日志、Prometheus、Tracing 等基础配置
 │   ├── topology.yaml        # 虚拟拓扑、主机、服务、边和 gate 定义
 │   └── llm.yaml             # LLM 配置，默认关闭
-├── docs/                    # 架构设计、多 Agent 欺骗规划文档
 ├── frontend/                # React + TypeScript Web 控制台
 ├── internal/                # 核心域模型、规则引擎、欺骗 Agent、响应器、会话管理
 │   ├── deception/           # 多 Agent、证据、规划、一致性和安全策略
@@ -116,7 +115,6 @@ AlterHive-v1.0.0/
 │   ├── llm/                 # LLM Provider 管理与安全门控
 │   ├── responders/          # SSH、HTTP、MySQL、Redis、网络等协议响应
 │   └── session/             # 会话生命周期与上下文管理
-├── scripts/                 # 攻击链模拟脚本
 ├── Dockerfile               # 后端镜像构建
 ├── docker-compose.yml       # 一键部署容器编排
 ├── Makefile                 # 常用构建、测试、Docker 命令
