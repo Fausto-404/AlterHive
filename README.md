@@ -57,8 +57,9 @@ Attacker / AI Pentest Agent
   -> Response Agent
   -> Virtual World State
 ```
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/c3b28c19-2828-4281-8c2a-fad7b339ab38" />
 
-### 2、子网幻象与多 Agent 规划
+### 2、多 Agent 驱动的子网幻象
 ```text
 Command Input
   -> Intent Router Agent
@@ -69,29 +70,20 @@ Command Input
   -> Safety Review
   -> Approved Shadow Topology
 ```
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/dfc0dc70-bc9d-4f07-a3be-71880151a85d" />
 
-### 3、可视化监控与复盘
-```text
-Sessions / Commands / Evidence
-  -> REST API
-  -> React Console
-  -> Dashboard
-  -> Topology View
-  -> Command Replay
-```
 
 ## 核心亮点功能展示
 ### 1、动态拓扑欺骗
-+ 基于 `configs/topology.yaml` 定义入口网段、主机、服务、边和访问状态。
 + 支持运行时根据攻击者目标扩展 shadow segment、shadow host 和 pivot edge。
-+ 已暴露事实会被锁定，避免前后响应不一致。
++ 事实一致性策略，已暴露事实锁定机制，前后响应一致。
 <img width="2952" height="1524" alt="image" src="https://github.com/user-attachments/assets/0c09d871-641e-475e-8614-97759b1e2c5d" />
 
 ### 2、高交互 SSH 蜜罐
 + 支持 SSH 入口、shell 命令、嵌套 SSH、密码提示和跳板上下文。
 + 内置常见命令响应，包括 `nmap`、`fscan`、`curl`、`ssh`、`mysql`、`redis-cli`、`kubectl` 等。
 + 可记录攻击者命令、远端地址、会话状态、证据命中和拓扑变化。
-<img width="1450" height="1484" alt="image" src="https://github.com/user-attachments/assets/2f4bf28f-92f3-4fce-8a8c-9aa28fa5f309" />
+<img width="2896" height="1518" alt="image" src="https://github.com/user-attachments/assets/28a4cc28-8525-4971-b437-8e181dc59981" />
 
 ### 3、证据链投放
 + 在虚拟文件系统中放置 `.env`、应用日志、Git 凭据、部署脚本、kubeconfig 等线索。
@@ -104,7 +96,8 @@ Sessions / Commands / Evidence
 + 会话管理：查看会话列表、命令历史、攻击者画像和终端回放。
 + 拓扑视图：查看入口网段、主机、服务、边、影子资产和当前会话可见范围。
 + 系统配置：管理 SSH/API 端口、拓扑 CIDR、会话超时和 LLM Provider。
-<img width="2956" height="1522" alt="image" src="https://github.com/user-attachments/assets/2845d359-38e0-4cc3-ae96-7a6118caf330" />
+<img width="2962" height="1484" alt="image" src="https://github.com/user-attachments/assets/ec25cd5a-78e5-4074-b029-60c43bbefc10" />
+
 
 
 ## 项目目录
@@ -207,12 +200,6 @@ npm run dev
 + Agent：Intent Router、Topology Planner、World Builder、Evidence Agent、Safety Agent、Consistency Critic
 + 部署：Docker Compose
 
-## 版本说明
-本版本重点能力：
-+ 高交互 SSH 蜜罐入口。
-+ 子网幻象拓扑和 shadow asset 扩展。
-+ Web 控制台会话、拓扑、命令和系统配置管理。
-+ 多 Agent 欺骗规划和证据投放机制。
 
 ## 免责声明
 本项目仅用于合法授权的安全测试、攻防演练、防守验证和安全研究。请勿将本项目用于未授权访问、攻击真实系统或规避安全监测。使用者应自行承担部署、配置和使用过程中的合规与安全责任。
